@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bot</title>
+</head>
+<body>
+    <h1>Information Search Bot</h1>
+    <form method="POST" action="/search">
+        <input type="text" name="query" placeholder="Enter your query here" required>
+
+        <button type="submit">Search</button>
+    </form>
+
+    {% if query %}
+        <h2>Query:</h2>
+        <p>{{ query }}</p>
+    {% endif %}
+
+    {% if response %}
+        <h2>Response:</h2>
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+
+</html>
